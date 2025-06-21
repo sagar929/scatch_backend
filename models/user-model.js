@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
     type: Array,
     default: []
   },
-  isadmin: Boolean,
+  
   orders: {
     type: Array,
     default: []
@@ -26,5 +26,4 @@ const userSchema = new mongoose.Schema({
 
 
 
-
-module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.models.user || mongoose.model("user", userSchema);
